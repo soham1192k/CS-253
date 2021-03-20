@@ -1,0 +1,16 @@
+name=$(ls|grep *.zip)
+chmod 777 $name
+unzip $name
+mkdir q1_cs253_180771 q2_cs253_180771
+mv q1-cs253.tar.gz ./q1_cs253_180771
+cp script_1 ./q1_cs253_180771/script_1
+cp steps_1.txt ./q1_cs253_180771/steps_1.txt
+mv q2-cs253.tar.gz ./q2_cs253_180771
+cp script_2 ./q2_cs253_180771/script_2
+cp script_kill ./q2_cs253_180771/script_kill
+cp steps_2.txt ./q2_cs253_180771/steps_2.txt
+cd q1_cs253_180771
+bash script_1
+cd ..
+cd q2_cs253_180771
+bash script_2

@@ -1,0 +1,15 @@
+I wrote a makefile, which would use the gcc compiler to 
+create an ELF 64 bit executable, "zipfilegen.out"
+In the makefile, I defined a variable CC=gcc
+
+Then I had a target named build, which had the dependencies on the 
+three assembly files(.S).
+
+To realise this target, I simply did 
+
+--> gcc (file1.s) (file2.s) (file3.s) -o zipfilegen.out
+
+This gave me the required executable.
+
+The makefile also has a clean target, which basically cleans the 
+executable formed.

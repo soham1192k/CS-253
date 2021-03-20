@@ -1,0 +1,8 @@
+*******How to run*********
+Note--> The zip file containing the required directories have already been downloaded into the Run_this directory. There's no need to add anything into that.
+1.Open the Run_this directory
+2.Run "script_main"
+-->bash script_main
+This will run the other scripts in the required order, and will solve both the problems, from scratch
+
+The individual scripts and the steps detailing the script contents are also present in the respective question folder.

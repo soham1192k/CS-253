@@ -1,0 +1,23 @@
+***************Manual Method*************
+*Please use a fresh terminal*
+1.Unzip q1-cs253.tar.gz
+-->gunzip -d q1-cs253.tar.gz
+2.Extract from q1-cs253.tar
+-->tar -xvf q1-cs253.tar
+3.Unzip q1-cs253.zip
+-->unzip q1-cs253.zip
+4.Set all permission bits to 1
+-->chmod 777 {name}
+5.Unzip deploy.gz
+-->gunzip -d deploy.gz
+6.Unzip 5688bc90-ab36-4a02-b192-d2426572bc93.gz
+-->gunzip -d 5688bc90-ab36-4a02-b192-d2426572bc93.gz
+7.Run 5688bc90-ab36-4a02-b192-d2426572bc93
+-->bash 5688bc90-ab36-4a02-b192-d2426572bc93
+8.Set permission bits to 1
+-->chmod 777 {name}
+9.Copy the package-name from the terminal.
+10.Two directories are created. One contains the current date and time, and the second directory has two files, containing the server-id and package-id.
+11.	Run the script 'deploy' along with 4 parameters,and then redirect the output to the required file.
+	The first parameter is the name of the directory  which contains the script which has the date and time. The second parameter is the package name copied from the terminal. The third parameter is the second directory name,which contains scripts having the server and package id. The fourth parameter is the roll number.
+-->bash deploy loNxzcTgf07QIq5 J8yfS7nXQsWtFTb uFL0UWLavwaIMTR 180771 1>>submission-q1.txt

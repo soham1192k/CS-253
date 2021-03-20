@@ -1,0 +1,24 @@
+chmod 777 q1-cs253.tar.gz
+gunzip -d q1-cs253.tar.gz
+tar -xvf q1-cs253.tar
+chmod 777 q1-cs253.zip
+chmod 777 Q1.pdf.gz
+gunzip -d Q1.pdf.gz
+unzip q1-cs253.zip
+chmod 777 deploy.gz 5688bc90-ab36-4a02-b192-d2426572bc93.gz
+gunzip -d 5688bc90-ab36-4a02-b192-d2426572bc93.gz deploy.gz
+name=$(bash 5688bc90-ab36-4a02-b192-d2426572bc93 | grep package_name | awk '{print $3}')
+chmod 777 deploy
+for i in ( $(ls -ltri | tail -2 | awk '{print $10}') ); do
+	chmod 777 $i
+	cd $i
+	if [[ $(ls | wc -l) -eq 1 ]]; then
+		p1=$i
+	else
+		p2=$i
+	fi
+	cd ..
+done
+bash deploy $p1 $name $p2 180771>submission-q1.txt
+
+

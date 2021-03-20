@@ -1,0 +1,3 @@
+for i in $(ps -ef | grep timeout | awk '{print $2}' | head -3); do
+	kill -15 -$i
+done

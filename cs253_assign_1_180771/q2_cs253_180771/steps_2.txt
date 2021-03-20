@@ -1,0 +1,38 @@
+*Please run all scripts in a fresh terminal*
+1.Unzip q2-cs253.tar.gz
+-->gunzip -d q2-cs253.tar.gz
+2.Untar q2-cs253.tar
+-->tar -xvf q2-cs253.tar
+3.Set all permission bits to 1.
+-->chmod 777 {name}
+4.Run the script.
+-->bash script_2
+**********************script**********************************
+
+1.Create 3 input files,having distinct inputs
+--> echo soham>input1.txt
+	echo soham1>input2.txt
+	echo soham2>input3.txt
+2.Run the 3 scripts as background processes, one at a time,while redirecting the input via the input files.
+-->	bash 10ZmoZg3pWmw9aA<input1.txt &
+	bash DFwAU7iSoYorHy8<input2.txt &
+	bash dUkeKOpRSOxQfx2<input3.txt &
+3.Run the script to kill these processes.
+-->	bash script_kill
+(the user doesn't have to run script_kill explicitly)
+
+************************script_kill*******************
+
+1.First get a snapshot of all processes within the system.(ps will give us those processes which are running in the current terminal.)
+(To get all processes, we use ps -ef)
+2.Pipe the stdout of "ps -ef" to the stdin of 'grep', and look for the string "timeout".(grep searches for patterns in each file, and prints each line that matches a pattern)
+3.Pipe the stdout of 'grep timeout' to the stdin of 'awk', and iterate over the second word in all such lines
+(Awk program is a sequence of pattern pairs and function definitions.They are usually enclosed in ' ' to avoid shell interpretation.)
+(Here, awk '{print $2}' will return the second word of each line, which is also the PID of the 'timeout' commands.)
+The PID of the timeout commands of our interest(corresponding to the three scripts) will be the second word of the first 3 lines.
+-->	for i in $(ps -ef | grep timeout | awk '{print $2}' | head -3); do
+		kill -15 -$i
+	done
+4. For all the significant PIDs,kill all those processes whose process group ID(PGID) is equal to the absolute value of the PID,and for which the process has permission to send a signal.
+(This is done by passing a negative value of the PID obtained.)
+(kill -15-->Soft termination)

@@ -1,0 +1,20 @@
+chmod 777 q2-cs253.tar.gz
+gunzip -d q2-cs253.tar.gz
+tar -xvf q2-cs253.tar
+chmod 777 Q2.pdf
+chmod 777 10ZmoZg3pWmw9aA
+chmod 777 DFwAU7iSoYorHy8
+chmod 777 dUkeKOpRSOxQfx2
+echo soham>input1.txt
+echo soham1>input2.txt
+echo soham2>input3.txt
+bash 10ZmoZg3pWmw9aA<input1.txt &
+bash DFwAU7iSoYorHy8<input2.txt &
+bash dUkeKOpRSOxQfx2<input3.txt &
+bash script_kill
+
+
+
+
+
+
