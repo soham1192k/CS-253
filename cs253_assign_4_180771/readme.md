@@ -22,5 +22,4 @@ Deliverables:
 
 You have to submit only one zip folder as final submission in the format cs253_assign_4_<your_roll_number>.zip
 
-This zip folder should contain the following files:
 
