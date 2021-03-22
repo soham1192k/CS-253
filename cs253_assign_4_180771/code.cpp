@@ -5,6 +5,7 @@ using namespace std;
 int main(int argc, char** argv) {
     int micro=5000000;
     int micro1=5;
+    int fail=0;
     string s;
     cout<<"********Welcome to the Submission Portal********\n";
     cout<<"Please go through the following rules carefully:\n";
@@ -30,9 +31,11 @@ int main(int argc, char** argv) {
             else{
                 // cout<<"You have exceeded your quota\n";
                 usleep(micro1);
+                fail++;
             }
             pos+=2;
         }
     }
+    cout<<"Number of failed attempts: "<<fail<<'\n';
     return 0;
 }
