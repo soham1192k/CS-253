@@ -7,6 +7,7 @@ int main(int argc, char** argv) {
     assert(argc<=6*max_stud+1);
     int micro=5000000;
     int micro1=5;
+    int fail=0;
     string s;
     cout<<"********Welcome to the Submission Portal********\n";
     cout<<"Please go through the following rules carefully:\n";
@@ -31,9 +32,11 @@ int main(int argc, char** argv) {
             }
             else{
                 usleep(micro1);
+                fail++;
             }
             pos+=2;
         }
     }
+    cout<<"Number of failed attempts: "<<fail<<'\n';
     return 0;
 }
