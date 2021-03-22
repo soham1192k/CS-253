@@ -1,0 +1,56 @@
+********Welcome to the Submission Portal********
+Please go through the following rules carefully:
+1.You can update your submission not more than 3 times.
+2.Every time you update your submission, you will not be able to update again before 5 seconds
+3.Every invalid submission will disable this script for 5 microseconds
+Continue?(Y/N)
+y
+Submission successfully updated for Roll Number: 180771
+Mon 22 Mar 17:43:28 IST 2021
+Submission successfully updated for Roll Number: 000000
+Mon 22 Mar 17:43:33 IST 2021
+Submission successfully updated for Roll Number: 180771
+Mon 22 Mar 17:43:38 IST 2021
+Submission successfully updated for Roll Number: 180771
+Mon 22 Mar 17:43:43 IST 2021
+Submission successfully updated for Roll Number: 180771
+Mon 22 Mar 17:43:51 IST 2021
+********************************
+Now running code_without_vulnerabilities1.cpp
+cwv1.out: code_without_vulnerabilities1.cpp:7: int main(int, char**): Assertion `argc<=6*max_stud+1' failed.
+run.sh: line 18: 25361 Aborted                 ./cwv1.out $temp
+********************************
+Now running code_without_vulnerabilities2.cpp
+********Welcome to the Submission Portal********
+Please go through the following rules carefully:
+1.You can update your submission not more than 3 times.
+2.Every time you update your submission, you will not be able to update again before 5 seconds
+3.Every invalid submission will disable this script for 5 microseconds
+Continue?(Y/N)
+y
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:10 IST 2021
+Submission Successfully Updated for Roll Number: 000000!
+Mon 22 Mar 17:44:15 IST 2021
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:20 IST 2021
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:25 IST 2021
+********************************
+Now running code_without_vulnerabilities3.cpp
+********Welcome to the Submission Portal********
+Please go through the following rules carefully:
+1.You can update your submission not more than 3 times.
+2.Every time you update your submission, you will not be able to update again before 5 seconds
+3.Every invalid submission will disable this script for 5 microseconds
+Continue?(Y/N)
+y
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:41 IST 2021
+Submission Successfully Updated for Roll Number: 000000!
+Mon 22 Mar 17:44:46 IST 2021
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:51 IST 2021
+Submission Successfully Updated for Roll Number: 180771!
+Mon 22 Mar 17:44:56 IST 2021
+********************************

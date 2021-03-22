@@ -1,0 +1,5 @@
+1. make all
+----->This runs the bash script, which in turn first runs the vulnerable program on some output, and then runs the 3 programs without 
+vulnerabilities with the same output.
+
+2. Once, everything runs, make clean to clear the stray files.
