@@ -1,4 +1,4 @@
-You should pick some individual or organization, and write a factual summary (about 250 words). You must produce the writeup in Latex, and the summary should be described with the help of at least five different types of plots. You must be careful to pick the right plot in each case to well illustrate the claim that you want to make. You may collect data from any source, but you must ensure that the plots you produce are not already available (for example, if you draw data from kaggle).
+You should pick some individual or organization, and write a factual summary (about 500 words). You must produce the writeup in Latex, and the summary should be described with the help of at least five different types of plots. You must be careful to pick the right plot in each case to well illustrate the claim that you want to make. You may collect data from any source, but you must ensure that the plots you produce are not already available (for example, if you draw data from kaggle).
 
 Deliverables:
 
