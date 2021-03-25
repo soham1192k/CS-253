@@ -10,7 +10,7 @@ fig1, ax1 = plt.subplots()
 ax1.pie(data, explode=explode, labels=format, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal') 
-plt.title("Rohit Sharma:Number of matches played across formats")
+plt.savefig('1.png')
 plt.show()
 
 #Number of centuries and half centuries
@@ -37,6 +37,7 @@ autolabel(rects2)
 fig.tight_layout()
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.title("Rohit Sharma:Count of Centuries and Half Centuries across formats")
+plt.savefig('2.png')
 plt.show()
 
 #Average
@@ -47,6 +48,7 @@ plt.grid(color='b',linestyle='-',linewidth=1)
 plt.xlabel("Format")
 plt.ylabel("Average")
 plt.title("Rohit Sharma: Average across various formats")
+plt.savefig('3.png')
 plt.show()
 
 #Strike Rate
@@ -57,6 +59,7 @@ plt.grid(color='b',linestyle='-',linewidth=1)
 plt.xlabel("Format")
 plt.ylabel("Strike Rate")
 plt.title("Rohit Sharma: Strike Rate across various formats")
+plt.savefig('4.png')
 plt.show()
 
 #Total Runs across formats
@@ -72,6 +75,7 @@ plt.xlabel("Format")
 plt.ylabel("Runs")
 plt.title("Rohit Sharma:Total runs scored per year across formats")
 plt.legend(["Tests","ODIs","T20Is"])
+plt.savefig('5.png')
 plt.show()
 
 #Runs in all formats across all countries
@@ -100,6 +104,7 @@ plt.xlabel("Country")
 plt.ylabel("Runs")
 plt.title("Rohit Sharma: Runs scored across all formats in every country")
 plt.legend(["Tests","ODIs","T20Is"])
+plt.savefig('6.png')
 plt.show()
 
 # Mode of dismissal
@@ -129,6 +134,7 @@ ax1.pie(data, explode=explode, labels=way, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal') 
 plt.title("Rohit Sharma:Mode of dismissal in T20Is")
+plt.savefig('7.png')
 plt.show()
 
 #Runs against every country
@@ -151,6 +157,7 @@ autolabel(rects3)
 fig.tight_layout()
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.title("Rohit Sharma:Performances by Opponent")
+plt.savefig('8.png')
 plt.show()
 
 #Average across batting positions
@@ -166,6 +173,7 @@ plt.xlabel("Batting Position")
 plt.ylabel("Average")
 plt.title("Rohit Sharma:Average across batting positions")
 plt.legend(["Tests","ODIs","T20Is"])
+plt.savefig('9.png')
 plt.show()
 
 #Home and away runs
@@ -186,6 +194,7 @@ fig.tight_layout()
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.title("Rohit Sharma:Total Runs- Home and Away")
 plt.legend(["Tests","ODIs","T20Is"])
+plt.savefig('10.png')
 plt.show()
 
 #Home and away centuries
@@ -206,6 +215,7 @@ fig.tight_layout()
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.title("Rohit Sharma:Centuries-Home and away")
 plt.legend(["Tests","ODIs","T20Is"])
+plt.savefig('11.png')
 plt.show()
 
 #IPL most sixes
@@ -243,4 +253,5 @@ plt.legend(["Chris Gayle","AB de Villiers","MS Dhoni","Rohit Sharma","Virat Kohl
 plt.xlabel("Strike Rate")
 plt.ylabel("Number of sixes")
 plt.title("IPL: Strike Rate vs Number of sixes for the top 10 players")
+plt.savefig('12.png')
 plt.show()
