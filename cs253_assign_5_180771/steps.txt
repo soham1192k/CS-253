@@ -1,0 +1,4 @@
+1. I have written the .tex file on overleaf, so it might not compile locally.
+2. To run, just run "make"
+3. This creates the plots, which I have used in my pdf file.
+4. To clean the plots, just run "make clean"
