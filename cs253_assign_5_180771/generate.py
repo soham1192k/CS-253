@@ -1,10 +1,13 @@
 from matplotlib import pyplot as plt  
 import numpy as np
 from matplotlib import rc
+import csv
+with open('data.csv', newline='') as csvfile:
+    data_list=list(csv.reader(csvfile, delimiter=','))
 
 #Number of matches 
 format=['Tests','ODIs','T20Is','First-Class','List A','T20s']
-data=[38,225,111,98,296,343]
+data=list(map(int,data_list[0]))
 explode= (0.2,0.1,0,0,0,0)
 fig1, ax1 = plt.subplots()
 ax1.pie(data, explode=explode, labels=format, autopct='%1.1f%%',
@@ -14,8 +17,8 @@ plt.savefig('1.png')
 plt.show()
 
 #Number of centuries and half centuries
-centuries=[7,29,4,24,32,6]
-half_centuries=[12,43,22,32,56,64]
+centuries=list(map(int,data_list[1]))
+half_centuries=list(map(int,data_list[2]))
 x = np.arange(len(format))  # the label locations
 width = 0.35
 fig, ax = plt.subplots()
@@ -42,7 +45,7 @@ plt.show()
 
 #Average
 fig = plt.figure()
-avg=[46.69,49.15,32.54,55.41,46.46,32.03]
+avg=list(map(float,data_list[3]))
 plt.bar(format,avg,color='maroon',width=0.4)
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.xlabel("Format")
@@ -53,8 +56,8 @@ plt.show()
 
 #Strike Rate
 fig = plt.figure()
-avg=[58.41,88.84,138.96,62.84,88.39,133.58]
-plt.bar(format,avg,color='orange',width=0.4)
+srate=list(map(float,data_list[4]))
+plt.bar(format,srate,color='orange',width=0.4)
 plt.grid(color='b',linestyle='-',linewidth=1)
 plt.xlabel("Format")
 plt.ylabel("Strike Rate")
@@ -64,9 +67,9 @@ plt.show()
 
 #Total Runs across formats
 x1=[2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020]
-y1=[0,0,0,0,0,0,333,237,326,288,217,184,556,474]
-y2=[61,532,102,504,611,168,1196,578,815,564,1293,1030,1490,171]
-y3=[88,8,145,94,80,116,8,200,128,497,279,590,396,140]
+y1=list(map(int,data_list[5]))
+y2=list(map(int,data_list[6]))
+y3=list(map(int,data_list[7]))
 plt.plot(x1,y1,marker='o')
 plt.plot(x1,y2,marker='o')
 plt.plot(x1,y3,marker='o')
@@ -81,9 +84,9 @@ plt.show()
 #Runs in all formats across all countries
 rc('font', weight='bold')
 data=["Australia","Bangladesh","England","India","New Zealand","South Africa","Sri Lanka","West Indies"]
-bars1=[408,6,34,1670,122,123,202,50]
-bars2=[1328,331,1335,3556,437,256,583,517]
-bars3=[181,338,269,1019,236,173,268,110]
+bars1=list(map(int,data_list[8]))
+bars2=list(map(int,data_list[9]))
+bars3=list(map(int,data_list[10]))
 bars = np.add(bars1, bars2).tolist()
 r = [0,1,2,3,4,5,6,7]
 barWidth=0.5
@@ -109,7 +112,7 @@ plt.show()
 
 # Mode of dismissal
 way=["Bowled","Caught","Caught Behind","LBW","Stumped","Run Out"]
-data=[29,87,36,18,3,13]
+data=list(map(int,data_list[11]))
 explode= (0,0.1,0,0,0.2,0.1)
 fig1, ax1 = plt.subplots()
 ax1.pie(data, explode=explode, labels=way, autopct='%1.1f%%',
@@ -118,7 +121,7 @@ ax1.axis('equal')
 plt.title("Rohit Sharma:Mode of dismissal in ODIs")
 plt.show()
 way=["Bowled","Caught","Caught Behind","LBW","Stumped","Run Out"]
-data=[10,23,10,10,3,0]
+data=list(map(int,data_list[12]))
 explode= (0,0.1,0,0,0.2,0.1)
 fig1, ax1 = plt.subplots()
 ax1.pie(data, explode=explode, labels=way, autopct='%1.1f%%',
@@ -127,7 +130,7 @@ ax1.axis('equal')
 plt.title("Rohit Sharma:Mode of dismissal in Tests")
 plt.show()
 way=["Bowled","Caught","Caught Behind","LBW","Stumped","Run Out"]
-data=[16,46,9,9,3,5]
+data=list(map(int,data_list[13]))
 explode= (0,0.1,0,0,0.2,0.1)
 fig1, ax1 = plt.subplots()
 ax1.pie(data, explode=explode, labels=way, autopct='%1.1f%%',
@@ -139,10 +142,10 @@ plt.show()
 
 #Runs against every country
 countries=["Afghanistan","Australia","Bangladesh","England","Ireland","New Zealand","Pakistan","South Africa","Sri Lanka","UAE","West Indies","Zimbabwe"]
-t20=[1,318,452,317,149,338,70,362,289,39,519,10]
-odi=[19,2208,660,482,64,703,720,766,1665,57,1523,242]
-tests=[0,408,33,379,0,360,0,678,419,0,338,0]
-x = np.arange(len(countries))  # the label locations
+t20=list(map(int,data_list[14]))
+odi=list(map(int,data_list[15]))
+tests=list(map(int,data_list[16]))
+x = np.arange(len(countries)) 
 width = 0.35
 fig, ax = plt.subplots()
 rects1 = ax.bar(x - 2*width/3,tests, width, label='Tests')
@@ -162,9 +165,9 @@ plt.show()
 
 #Average across batting positions
 x1=[2,3,4,5,6,7]
-y1=[64.38,21.40,4,29.13,54.58,0]
-y2=[57.87,15,31.09,45.37,28.57,14]
-y3=[32.93,113,36.20,14.50,36,7]
+y1=list(map(float,data_list[17]))
+y2=list(map(float,data_list[18]))
+y3=list(map(float,data_list[19]))
 plt.plot(x1,y1,marker='o')
 plt.plot(x1,y2,marker='o')
 plt.plot(x1,y3,marker='o')
@@ -178,9 +181,9 @@ plt.show()
 
 #Home and away runs
 format=["Tests","ODIs","T20Is"]
-home=[1670,3556,1019]
-away=[945,5587,1845]
-x = np.arange(len(format))  # the label locations
+home=list(map(int,data_list[20]))
+away=list(map(int,data_list[21]))
+x = np.arange(len(format))  
 width = 0.35
 fig, ax = plt.subplots()
 rects1 = ax.bar(x - width/2, home, width, label='Home')
@@ -199,9 +202,9 @@ plt.show()
 
 #Home and away centuries
 format=["Tests","ODIs","T20Is"]
-home=[7,11,3]
-away=[0,18,1]
-x = np.arange(len(format))  # the label locations
+home=list(map(int,data_list[22]))
+away=list(map(int,data_list[23]))
+x = np.arange(len(format))
 width = 0.35
 fig, ax = plt.subplots()
 rects1 = ax.bar(x - width/2, home, width, label='Home')
