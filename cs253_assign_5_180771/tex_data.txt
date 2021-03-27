@@ -1,0 +1,22 @@
+Compiler: Overleaf
+
+Packages Used:
+1.graphicx
+2.babel					
+3.fontenc 					
+4.inputenc						
+5.helvet					
+6.microtype						
+7.blindtext
+8.csquotes
+9.setspace			
+10.geometry				               				            
+11.mathtools 												
+12.mhchem						
+13.siunitx											
+14.caption								
+15.placeins				
+16.array 							
+17.booktabs							
+18.biblatex	
+19.hyperref, bookmark	
